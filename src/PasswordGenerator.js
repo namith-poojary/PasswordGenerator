@@ -29,7 +29,7 @@ const generatePassword = (
 const PasswordGenerator = () => {
   const [password, setPassword] = useState("");
   const [previousPasswords, setPreviousPasswords] = useState([]);
-  const [FivePasswords, setFivePasswords] = useState([]);
+  const [fivePasswords, setFivePasswords] = useState([]);
   const [includeNumbers, setIncludeNumbers] = useState(true);
   const [includeAlphabets, setIncludeAlphabets] = useState(true);
   const [includeSpecialChars, setIncludeSpecialChars] = useState(true);
@@ -134,7 +134,7 @@ const PasswordGenerator = () => {
       <div className="previous-passwords text-center">
         <strong>Last 5 Passwords:</strong>
         <ul className="list-unstyled">
-          {FivePasswords.map((prevPassword, index) => (
+          {fivePasswords.map((prevPassword, index) => (
             <li key={index}>{prevPassword}</li>
           ))}
         </ul>
